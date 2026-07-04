@@ -1,1 +1,1 @@
-This is will be the client slection algorithm
+This is will be the client selection algorithm

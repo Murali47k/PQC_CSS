@@ -4,14 +4,15 @@ build-backend = "hatchling.build"
 
 [project]
 name = "css"
-version = "1.1.6"
-description = "Federated Learning with PyTorch and Flower (Quickstart Example)"
+version = "1.2.0"
+description = "PQC-aware Client-Selection Strategy for Federated Learning (Flower + PyTorch)"
 license = {file = "LICENSE"}
 dependencies = [
     "flwr[simulation]>=1.28.0",
     "flwr-datasets[vision]>=0.6.0",
     "torch==2.10.0",
     "torchvision==0.25.0",
+    "pqcrypto>=0.4.0",
 ]
 
 [tool.hatch.build.targets.wheel]
@@ -28,8 +29,33 @@ clientapp = "c_select.client_app:app"
 
 [tool.flwr.app.config]
 num-server-rounds = 3
+fraction-train = 0.5
 fraction-evaluate = 1.0
 local-epochs = 1
 learning-rate = 0.1
 batch-size = 32
 save-model = false
+# One of: pqc_aware | random | data_size | loss_based | resource_aware | trust_based
+selection-strategy = "pqc_aware"
+
+
+#######################################################################
+# CONFIGURATION MIGRATION NOTICE:
+#
+# What was previously called "federation config" for SuperLink
+# connections in pyproject.toml has been renamed and moved.
+#
+# These settings are now **SuperLink connection configuration**
+# and are defined in the Flower configuration file.
+#
+# The entries below are commented out intentionally and are kept
+# only as a migration reference.
+#
+# Docs: https://flower.ai/docs/framework/ref-flower-configuration.html
+#######################################################################
+
+# [tool.flwr.federations]
+# default = "local-simulation"
+
+# [tool.flwr.federations.local-simulation]
+# options.num-supernodes = 10
