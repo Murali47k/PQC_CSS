@@ -1,0 +1,128 @@
+🎊 Successfully started run 7865972488520168509
+INFO :      Starting logstream for run_id `7865972488520168509`
+INFO :      Starting Flower Simulation
+Successfully installed css to /home/murali-karthick/.flwr/apps/flwrlabs.css.1.2.0.14d87ead.
+INFO :      Starting ScoredSelectionStrategy strategy:
+INFO :          ├── Number of rounds: 3
+INFO :          ├── ArrayRecord (0.17 MB)
+INFO :          ├── ConfigRecord (train): {'lr': 0.1}
+INFO :          ├── ConfigRecord (evaluate): (empty!)
+INFO :          ├──> Sampling:
+INFO :          │       ├──Fraction: train (0.50) | evaluate ( 1.00)
+INFO :          │       ├──Minimum nodes: train (2) | evaluate (2)
+INFO :          │       └──Minimum available nodes: 2
+INFO :          └──> Keys in records:
+INFO :                  ├── Weighted by: 'num-examples'
+INFO :                  ├── ArrayRecord key: 'arrays'
+INFO :                  └── ConfigRecord key: 'config'
+INFO :      
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/home/murali-karthick/Desktop/College/OELP/Flower/venv/lib/python3.12/site-packages/ray/_private/worker.py:2051: FutureWarning: Tip: In future versions of Ray, Ray will no longer override accelerator visible devices env var if num_gpus=0 or num_gpus=None (default). To enable this behavior and turn off this error message, set RAY_ACCEL_ENV_VAR_OVERRIDE_ON_ZERO=0
+  warnings.warn(
+INFO :      Initial global evaluation results: {'accuracy': 0.0949, 'loss': 2.3054405405551575}
+INFO :      
+INFO :      [ROUND 1/3]
+INFO :      configure_train (round 1): insufficient metric history, random-sampled 5 nodes
+(ClientAppActor pid=24048) Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+INFO :      aggregate_train: Received 5 results and 0 failures
+INFO :          └──> Aggregated MetricRecord: {'train_loss': 1.8556282390753431, 'data_size': 4800.0, 'model_bytes': 177704.0, 'cpu_score': 0.4488178273063347, 'bandwidth_mbps': 24.919665532631665, 'dropout_probability': 0.17855496400445547, 'trust': 0.8217308743349572, 'kem_keygen_ms': 0.16653000020596664, 'kem_encaps_ms': 0.12777339961758116, 'kem_decaps_ms': 0.13639760018122615, 'kem_pk_bytes': 1184.0, 'kem_ct_bytes': 1088.0, 'dsa_sign_ms': 1.9994047999716713, 'dsa_verify_ms': 1.1400057999708224, 'dsa_pk_bytes': 1952.0000000000002, 'dsa_sig_bytes': 3309.0000000000005, 'pqc_total_time_ms': 3.5701115999472677, 'pqc_total_bytes': 7533.000000000001}
+INFO :      configure_evaluate: Sampled 10 nodes (out of 10)
+(ClientAppActor pid=24050) Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads. [repeated 5x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#log-deduplication for more options.)
+INFO :      aggregate_evaluate: Received 10 results and 0 failures
+INFO :          └──> Aggregated MetricRecord: {'eval_loss': 2.3281425363139103, 'eval_acc': 0.11408333333333333}
+INFO :      Global evaluation
+INFO :          └──> MetricRecord: {'accuracy': 0.1135, 'loss': 2.3271331877648076}
+INFO :      
+INFO :      [ROUND 2/3]
+INFO :      configure_train (round 2): scorer=data_size selected 5/10 nodes
+INFO :      aggregate_train: Received 5 results and 0 failures
+INFO :          └──> Aggregated MetricRecord: {'train_loss': 2.3080273745854694, 'data_size': 4800.0, 'model_bytes': 177704.0, 'cpu_score': 0.4488178273063347, 'bandwidth_mbps': 24.919665532631665, 'dropout_probability': 0.17855496400445547, 'trust': 0.8217308743349572, 'kem_keygen_ms': 0.1282310000533471, 'kem_encaps_ms': 0.10668679988157237, 'kem_decaps_ms': 0.1250617999176029, 'kem_pk_bytes': 1184.0, 'kem_ct_bytes': 1088.0, 'dsa_sign_ms': 1.677272599954449, 'dsa_verify_ms': 1.0917275998508558, 'dsa_pk_bytes': 1952.0000000000002, 'dsa_sig_bytes': 3309.0000000000005, 'pqc_total_time_ms': 3.1289797996578272, 'pqc_total_bytes': 7533.000000000001}
+INFO :      configure_evaluate: Sampled 10 nodes (out of 10)
+INFO :      aggregate_evaluate: Received 10 results and 0 failures
+INFO :          └──> Aggregated MetricRecord: {'eval_loss': 2.2929401008706347, 'eval_acc': 0.11508333333333334}
+INFO :      Global evaluation
+INFO :          └──> MetricRecord: {'accuracy': 0.1147, 'loss': 2.2923041597197327}
+INFO :      
+INFO :      [ROUND 3/3]
+INFO :      configure_train (round 3): scorer=data_size selected 5/10 nodes
+INFO :      aggregate_train: Received 5 results and 0 failures
+INFO :          └──> Aggregated MetricRecord: {'train_loss': 1.7018024680614472, 'data_size': 4800.0, 'model_bytes': 177704.0, 'cpu_score': 0.4488178273063346, 'bandwidth_mbps': 24.91966553263166, 'dropout_probability': 0.17855496400445547, 'trust': 0.8217308743349572, 'kem_keygen_ms': 0.1211154001794057, 'kem_encaps_ms': 0.11385800025891513, 'kem_decaps_ms': 0.12152299968875013, 'kem_pk_bytes': 1184.0, 'kem_ct_bytes': 1088.0, 'dsa_sign_ms': 1.841734800109407, 'dsa_verify_ms': 1.090587799808418, 'dsa_pk_bytes': 1952.0000000000002, 'dsa_sig_bytes': 3309.0000000000005, 'pqc_total_time_ms': 3.288819000044896, 'pqc_total_bytes': 7533.000000000001}
+INFO :      configure_evaluate: Sampled 10 nodes (out of 10)
+INFO :      aggregate_evaluate: Received 10 results and 0 failures
+INFO :          └──> Aggregated MetricRecord: {'eval_loss': 1.9937881968523326, 'eval_acc': 0.24291666666666667}
+INFO :      Global evaluation
+INFO :          └──> MetricRecord: {'accuracy': 0.2445, 'loss': 1.9909763773785363}
+INFO :      
+INFO :      Strategy execution finished in 42.68s
+INFO :      
+INFO :      Final results:
+INFO :      
+INFO :          Global Arrays:
+INFO :                  ArrayRecord (0.171 MB)
+INFO :      
+INFO :          Aggregated ClientApp-side Train Metrics:
+INFO :          { 1: { 'bandwidth_mbps': '2.4920e+01',
+INFO :                 'cpu_score': '4.4882e-01',
+INFO :                 'data_size': '4.8000e+03',
+INFO :                 'dropout_probability': '1.7855e-01',
+INFO :                 'dsa_pk_bytes': '1.9520e+03',
+INFO :                 'dsa_sig_bytes': '3.3090e+03',
+INFO :                 'dsa_sign_ms': '1.9994e+00',
+INFO :                 'dsa_verify_ms': '1.1400e+00',
+INFO :                 'kem_ct_bytes': '1.0880e+03',
+INFO :                 'kem_decaps_ms': '1.3640e-01',
+INFO :                 'kem_encaps_ms': '1.2777e-01',
+INFO :                 'kem_keygen_ms': '1.6653e-01',
+INFO :                 'kem_pk_bytes': '1.1840e+03',
+INFO :                 'model_bytes': '1.7770e+05',
+INFO :                 'pqc_total_bytes': '7.5330e+03',
+INFO :                 'pqc_total_time_ms': '3.5701e+00',
+INFO :                 'train_loss': '1.8556e+00',
+INFO :                 'trust': '8.2173e-01'},
+INFO :            2: { 'bandwidth_mbps': '2.4920e+01',
+INFO :                 'cpu_score': '4.4882e-01',
+INFO :                 'data_size': '4.8000e+03',
+INFO :                 'dropout_probability': '1.7855e-01',
+INFO :                 'dsa_pk_bytes': '1.9520e+03',
+INFO :                 'dsa_sig_bytes': '3.3090e+03',
+INFO :                 'dsa_sign_ms': '1.6773e+00',
+INFO :                 'dsa_verify_ms': '1.0917e+00',
+INFO :                 'kem_ct_bytes': '1.0880e+03',
+INFO :                 'kem_decaps_ms': '1.2506e-01',
+INFO :                 'kem_encaps_ms': '1.0669e-01',
+INFO :                 'kem_keygen_ms': '1.2823e-01',
+INFO :                 'kem_pk_bytes': '1.1840e+03',
+INFO :                 'model_bytes': '1.7770e+05',
+INFO :                 'pqc_total_bytes': '7.5330e+03',
+INFO :                 'pqc_total_time_ms': '3.1290e+00',
+INFO :                 'train_loss': '2.3080e+00',
+INFO :                 'trust': '8.2173e-01'},
+INFO :            3: { 'bandwidth_mbps': '2.4920e+01',
+INFO :                 'cpu_score': '4.4882e-01',
+INFO :                 'data_size': '4.8000e+03',
+INFO :                 'dropout_probability': '1.7855e-01',
+INFO :                 'dsa_pk_bytes': '1.9520e+03',
+INFO :                 'dsa_sig_bytes': '3.3090e+03',
+INFO :                 'dsa_sign_ms': '1.8417e+00',
+INFO :                 'dsa_verify_ms': '1.0906e+00',
+INFO :                 'kem_ct_bytes': '1.0880e+03',
+INFO :                 'kem_decaps_ms': '1.2152e-01',
+INFO :                 'kem_encaps_ms': '1.1386e-01',
+INFO :                 'kem_keygen_ms': '1.2112e-01',
+INFO :                 'kem_pk_bytes': '1.1840e+03',
+INFO :                 'model_bytes': '1.7770e+05',
+INFO :                 'pqc_total_bytes': '7.5330e+03',
+INFO :                 'pqc_total_time_ms': '3.2888e+00',
+INFO :                 'train_loss': '1.7018e+00',
+INFO :                 'trust': '8.2173e-01'}}
+INFO :      
+INFO :          Aggregated ClientApp-side Evaluate Metrics:
+INFO :          { 1: {'eval_acc': '1.1408e-01', 'eval_loss': '2.3281e+00'},
+INFO :            2: {'eval_acc': '1.1508e-01', 'eval_loss': '2.2929e+00'},
+INFO :            3: {'eval_acc': '2.4292e-01', 'eval_loss': '1.9938e+00'}}
+INFO :      
+INFO :          ServerApp-side Evaluate Metrics:
+INFO :          { 0: {'accuracy': '9.4900e-02', 'loss': '2.3054e+00'},
+INFO :            1: {'accuracy': '1.1350e-01', 'loss': '2.3271e+00'},
+INFO :            2: {'accuracy': '1.1470e-01', 'loss': '2.2923e+00'},
+INFO :            3: {'accuracy': '2.4450e-01', 'loss': '1.9910e+00'}}
