@@ -36,7 +36,7 @@ learning-rate = 0.1
 batch-size = 32
 save-model = false
 # One of: pqc_aware | random | data_size | loss_based | resource_aware | trust_based
-selection-strategy = "pqc_aware"
+selection-strategy = "random"
 
 
 #######################################################################
