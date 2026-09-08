@@ -21,12 +21,12 @@ FedModel:
   # Server LR, used by FedOpt and FedSCA
   eta: 1.0
 MLModel:
-  name: MLP
+  name: DenseNetSmall
   activation: relu
   dropout: 0.2
-  units:
-    - 512
-    - 512
+  # units:
+  #   - 512
+  #   - 512
   optimizer:
     name: sgd
     lr: 0.001

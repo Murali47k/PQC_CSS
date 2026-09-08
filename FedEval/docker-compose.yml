@@ -20,7 +20,7 @@ services:
     networks:
     - server-clients
     volumes:
-    - /home/simeonk1307/Projects/oelp-fedLearn/PQC_CSS/.trashyard/FedEval:/FML
+    - /home/simeonk1307/Projects/oelp-fedLearn/PQC_CSS/FedEval:/FML
     working_dir: /FML
   container_1:
     cap_add:
@@ -40,7 +40,7 @@ services:
     networks:
     - server-clients
     volumes:
-    - /home/simeonk1307/Projects/oelp-fedLearn/PQC_CSS/.trashyard/FedEval:/FML
+    - /home/simeonk1307/Projects/oelp-fedLearn/PQC_CSS/FedEval:/FML
     working_dir: /FML
   container_2:
     cap_add:
@@ -60,7 +60,7 @@ services:
     networks:
     - server-clients
     volumes:
-    - /home/simeonk1307/Projects/oelp-fedLearn/PQC_CSS/.trashyard/FedEval:/FML
+    - /home/simeonk1307/Projects/oelp-fedLearn/PQC_CSS/FedEval:/FML
     working_dir: /FML
   container_3:
     cap_add:
@@ -80,7 +80,7 @@ services:
     networks:
     - server-clients
     volumes:
-    - /home/simeonk1307/Projects/oelp-fedLearn/PQC_CSS/.trashyard/FedEval:/FML
+    - /home/simeonk1307/Projects/oelp-fedLearn/PQC_CSS/FedEval:/FML
     working_dir: /FML
   container_4:
     cap_add:
@@ -100,7 +100,7 @@ services:
     networks:
     - server-clients
     volumes:
-    - /home/simeonk1307/Projects/oelp-fedLearn/PQC_CSS/.trashyard/FedEval:/FML
+    - /home/simeonk1307/Projects/oelp-fedLearn/PQC_CSS/FedEval:/FML
     working_dir: /FML
   container_5:
     cap_add:
@@ -120,7 +120,7 @@ services:
     networks:
     - server-clients
     volumes:
-    - /home/simeonk1307/Projects/oelp-fedLearn/PQC_CSS/.trashyard/FedEval:/FML
+    - /home/simeonk1307/Projects/oelp-fedLearn/PQC_CSS/FedEval:/FML
     working_dir: /FML
   container_6:
     cap_add:
@@ -140,7 +140,7 @@ services:
     networks:
     - server-clients
     volumes:
-    - /home/simeonk1307/Projects/oelp-fedLearn/PQC_CSS/.trashyard/FedEval:/FML
+    - /home/simeonk1307/Projects/oelp-fedLearn/PQC_CSS/FedEval:/FML
     working_dir: /FML
   container_7:
     cap_add:
@@ -160,7 +160,7 @@ services:
     networks:
     - server-clients
     volumes:
-    - /home/simeonk1307/Projects/oelp-fedLearn/PQC_CSS/.trashyard/FedEval:/FML
+    - /home/simeonk1307/Projects/oelp-fedLearn/PQC_CSS/FedEval:/FML
     working_dir: /FML
   container_8:
     cap_add:
@@ -180,7 +180,7 @@ services:
     networks:
     - server-clients
     volumes:
-    - /home/simeonk1307/Projects/oelp-fedLearn/PQC_CSS/.trashyard/FedEval:/FML
+    - /home/simeonk1307/Projects/oelp-fedLearn/PQC_CSS/FedEval:/FML
     working_dir: /FML
   container_9:
     cap_add:
@@ -200,7 +200,7 @@ services:
     networks:
     - server-clients
     volumes:
-    - /home/simeonk1307/Projects/oelp-fedLearn/PQC_CSS/.trashyard/FedEval:/FML
+    - /home/simeonk1307/Projects/oelp-fedLearn/PQC_CSS/FedEval:/FML
     working_dir: /FML
   server:
     cap_add:
@@ -214,6 +214,6 @@ services:
     ports:
     - 8000:8000
     volumes:
-    - /home/simeonk1307/Projects/oelp-fedLearn/PQC_CSS/.trashyard/FedEval:/FML
+    - /home/simeonk1307/Projects/oelp-fedLearn/PQC_CSS/FedEval:/FML
     working_dir: /FML
 version: '2'

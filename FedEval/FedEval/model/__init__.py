@@ -6,8 +6,14 @@
 
 import tensorflow
 # Change the dtype
-tensorflow.keras.backend.set_floatx('float64')
+# tensorflow.keras.backend.set_floatx('float64')
 
 from .MLP import MLP
 from .LeNet import LeNet
 from .StackedLSTM import StackedLSTM
+from .VGGSmall import VGGSmall
+from .AlexNetSmall import AlexNetSmall
+from .DenseNetSmall import DenseNetSmall
+from .MobileNetSmall import MobileNetSmall
+from .ResNet18Small import ResNet18Small
+
