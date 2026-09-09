@@ -352,7 +352,7 @@ class _DataConfig(_Configuraiton):
         Returns:
             bool: True if the data partition strategy name is registered as followed; otherwise, False.
         """
-        return self._non_iid_strategy_name in ['natural', 'average']
+        return self._non_iid_strategy_name in ['natural', 'average'] # NOTE: ADD Gaussian HERE
 
     @property
     def normalized(self) -> bool:

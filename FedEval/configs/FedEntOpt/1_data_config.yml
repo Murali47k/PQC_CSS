@@ -1,7 +1,7 @@
 data_dir: data
 dataset: mnist
 non-iid: true
-non-iid-class: 1 # Only work when non-iid = True
+non-iid-class: 3 # Only work when non-iid = True
 non-iid-strategy: average # Only work when non-iid = True
 normalize: true
 sample_size: 700
